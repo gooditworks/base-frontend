@@ -1,0 +1,23 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/**/*.test.ts"],
+  "compilerOptions": {
+    "paths": {
+      "src/*": ["src/*"],
+    },
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "jsx": "preserve",
+    "target": "es5",
+    "lib": ["esnext"],
+    "strict": true,
+    "allowJs": false,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+  }
+}
