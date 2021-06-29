@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="flex items-center space-x-8 text-5xl"
+>
+  <button
+    data-cy="counter_dec"
+    onClick={[Function]}
+    type="button"
+  >
+    -
+  </button>
+  <span
+    data-cy="counter_value"
+  >
+    0
+  </span>
+  <button
+    data-cy="counter_inc"
+    onClick={[Function]}
+    type="button"
+  >
+    +
+  </button>
+</div>
+`;

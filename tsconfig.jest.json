@@ -1,8 +1,10 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.test.ts"],
-  "exclude": ["node_modules"],
+  "include": ["./**/*.test.*"],
+  "exclude": ["./cypress/**/*"],
   "compilerOptions": {
-    "isolatedModules": false
+    "noEmit": true,
+    "isolatedModules": false,
+    "jsx": "react"
   }
 }

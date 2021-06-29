@@ -3,14 +3,9 @@
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
-    "project": ["tsconfig.json", "tsconfig.jest.json"]
+    "project": ["tsconfig.json", "tsconfig.jest.json", "tsconfig.cypress.json"]
   },
-  "extends": [
-    "airbnb-ts",
-    "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended"
-  ],
+  "extends": ["airbnb-ts", "airbnb/hooks", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "quotes": ["error", "double"],
     "semi": ["error", "never"],
@@ -30,5 +25,12 @@
     "@typescript-eslint/restrict-template-expressions": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.ts", "*.test.tsx"],
+      "excludedFiles": "cypress/**",
+      "extends": ["plugin:jest/recommended"]
+    }
+  ]
 }

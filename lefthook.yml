@@ -1,14 +1,7 @@
 pre-commit:
-  parallel: true
-    eslint:
-      glob: "*.{js,ts,tsx}"
-      run: yarn eslint {staged_files}
-
-    typecheck:
-      run: yarn lint:typecheck
+  lint:
+    run: npm run lint
 
 pre-push:
-  parallel: true
-  commands:
-    test:
-      run: yarn test
+  test:
+    run: npm run test

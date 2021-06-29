@@ -1,16 +1,19 @@
 {
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.test.ts"],
+  "include": ["lib/**/*", "components/**/*", "pages/**/*", "next-env.d.ts"],
+  "exclude": ["node_modules", "cypress/**/*"],
   "compilerOptions": {
     "paths": {
-      "src/*": ["src/*"],
+      "lib/*": ["lib/*"],
+      "components/*": ["components/*"],
+      "pages/*": ["pages/*"]
     },
     "baseUrl": ".",
     "moduleResolution": "node",
     "module": "commonjs",
     "jsx": "preserve",
     "target": "es5",
-    "lib": ["esnext"],
+    "lib": ["esnext", "dom"],
+    "types": ["jest", "node"],
     "strict": true,
     "allowJs": false,
     "noImplicitAny": true,
@@ -19,5 +22,6 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true
   }
 }
