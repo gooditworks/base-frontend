@@ -6,9 +6,11 @@
   "author": "Max Eliseev <mxseev@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "postinstall": "sh ./scripts/add_base_remote.sh",
     "lint": "concurrently -c green \"npm:lint:*\"",
-    "lint:ts": "eslint --ext .ts,.tsx .",
+    "lint:base": "sh ./scripts/check_base_update.sh",
     "lint:typecheck": "tsc --noEmit --project tsconfig.json",
+    "lint:ts": "eslint --ext .ts,.tsx .",
     "test": "concurrently -c green \"npm:test:*\"",
     "test:unit": "jest"
   },
