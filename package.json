@@ -1,6 +1,6 @@
 {
   "name": "gooditworks_base",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gooditworks base project",
   "repository": "https://github.com/gooditworks/base",
   "author": "Max Eliseev <mxseev@gmail.com>",
@@ -21,7 +21,7 @@
     "@typescript-eslint/parser": "^4.26.1",
     "concurrently": "^6.2.0",
     "eslint": "^7.28.0",
-    "eslint-config-airbnb-ts": "^14.1.1",
+    "eslint-config-airbnb-base-ts": "^14.1.1",
     "eslint-plugin-jest": "^24.3.6",
     "jest": "^27.0.4",
     "prettier": "^2.3.1",
