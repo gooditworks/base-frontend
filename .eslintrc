@@ -5,7 +5,13 @@
     "sourceType": "module",
     "project": ["tsconfig.json", "tsconfig.jest.json", "tsconfig.cypress.json"]
   },
-  "extends": ["airbnb-ts", "airbnb/hooks", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "airbnb-ts",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals"
+  ],
   "rules": {
     "quotes": ["error", "double"],
     "semi": ["error", "never"],
