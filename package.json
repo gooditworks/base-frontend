@@ -10,7 +10,7 @@
     "start": "next build && next start",
     "dev": "next dev",
     "lint": "concurrently -c green \"npm:lint:*\"",
-    "lint:ts": "eslint --ext .ts,.tsx .",
+    "lint:next": "next lint",
     "lint:typecheck": "tsc --noEmit --project tsconfig.json",
     "test": "concurrently -c green \"npm:test:*\"",
     "test:unit": "jest",
