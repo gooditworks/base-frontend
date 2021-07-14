@@ -1,6 +1,6 @@
 import React from "react"
 
-import useCounter from "lib/hooks/useCounter"
+import useCounter from "hooks/useCounter"
 import Counter from "components/Counter"
 
 const Index = () => {

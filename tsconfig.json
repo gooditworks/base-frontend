@@ -1,11 +1,12 @@
 {
-  "include": ["lib/**/*", "components/**/*", "pages/**/*", "next-env.d.ts"],
+  "include": ["src/**/*", "next-env.d.ts"],
   "exclude": ["node_modules", "cypress/**/*"],
   "compilerOptions": {
     "paths": {
-      "lib/*": ["lib/*"],
-      "components/*": ["components/*"],
-      "pages/*": ["pages/*"]
+      "components/*": ["src/components/*"],
+      "hooks/*": ["src/hooks/*"],
+      "pages/*": ["src/pages/*"],
+      "styles/*": ["src/styles/*"]
     },
     "baseUrl": ".",
     "moduleResolution": "node",
