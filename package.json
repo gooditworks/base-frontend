@@ -12,7 +12,8 @@
     "lint:typecheck": "tsc --noEmit --project tsconfig.json",
     "lint:ts": "eslint --ext .ts,.tsx .",
     "test": "concurrently -c green \"npm:test:*\"",
-    "test:unit": "jest"
+    "test:unit": "jest",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.6",
