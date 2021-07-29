@@ -1,7 +1,39 @@
 {
   "path": "cz-conventional-changelog",
-  "skipQuestions": ["footer", "breaking"],
+  "skipQuestions": [
+    "footer",
+    "breaking"
+  ],
   "allowCustomScopes": true,
+  "types": {
+    "feat": {
+      "description": "feat: Новая функция"
+    },
+    "fix": {
+      "description": "fix: Багфикс"
+    },
+    "refactor": {
+      "description": "refactor: Изменение структуры кода, не влияющее на поведение"
+    },
+    "docs": {
+      "description": "docs: Только документация"
+    },
+    "perf": {
+      "description": "perf: Оптимизация производительности"
+    },
+    "test": {
+      "description": "test: Добавление тестов"
+    },
+    "chore": {
+      "description": "chore: Мелкие правки кода, генерация конфигураций, изменение настроек окружения и т.п."
+    },
+    "revert": {
+      "description": "revert: Откат изменений"
+    },
+    "WIP": {
+      "description": "WIP: Незавершенная работа"
+    }
+  },
   "scopes": [
     {"name": "git"}
   ]
