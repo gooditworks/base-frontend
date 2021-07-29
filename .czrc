@@ -1,0 +1,8 @@
+{
+  "path": "cz-conventional-changelog",
+  "skipQuestions": ["footer", "breaking"],
+  "allowCustomScopes": true,
+  "scopes": [
+    {"name": "git"}
+  ]
+}
