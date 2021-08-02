@@ -1,4 +1,12 @@
 # Changelog
+### [0.1.3](https://github.com/gooditworks/base/compare/v0.1.2...v0.1.3) (2021-08-02)
+
+
+### Features
+
+* **git:** commitlint-prompt заменен на commitzen ([1151987](https://github.com/gooditworks/base/commit/11519871f0942c247400c89ebcbe78771373f11d))
+* Добавлен commitlint prompt ([097964f](https://github.com/gooditworks/base/commit/097964fbd1ee8b7bd503f8898bea66d3b20eaeca))
+
 ### 0.1.2 (2021-07-27)
 
 
