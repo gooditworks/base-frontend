@@ -1,7 +1,21 @@
+commit-msg:
+  commands:
+    lint-commit-msg:
+      run: npx commitlint --edit
+
 pre-commit:
   lint:
     run: npm run lint
 
 pre-push:
-  test:
-    run: npm run test
+  parallel: true
+  commands:
+    eslint:
+      glob: "*.{js,ts,tsx}"
+      run: npx eslint {staged_files}
+
+    typecheck:
+      run: npm run lint:typecheck
+
+    test:
+      run: npm run test
