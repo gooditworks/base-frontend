@@ -1,6 +1,6 @@
 {
   "name": "gooditworks_base",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Gooditworks base project",
   "repository": "https://github.com/gooditworks/base",
   "author": "Max Eliseev <mxseev@gmail.com>",
@@ -12,19 +12,27 @@
     "lint:typecheck": "tsc --noEmit --project tsconfig.json",
     "lint:ts": "eslint --ext .ts,.tsx .",
     "test": "concurrently -c green \"npm:test:*\"",
-    "test:unit": "jest"
+    "test:unit": "jest",
+    "release": "standard-version",
+    "commit": "git add . && cz"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.6",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
+    "commitizen": "^4.2.4",
+    "commitlint-plugin-function-rules": "^1.3.2",
     "concurrently": "^6.2.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.28.0",
     "eslint-config-airbnb-base-ts": "^14.1.1",
     "eslint-plugin-jest": "^24.3.6",
     "jest": "^27.0.4",
     "prettier": "^2.3.1",
+    "standard-version": "^9.3.1",
     "ts-jest": "^27.0.3",
     "typescript": "^4.3.2"
   }
