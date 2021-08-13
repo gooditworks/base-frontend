@@ -6,7 +6,9 @@
       "components/*": ["src/components/*"],
       "hooks/*": ["src/hooks/*"],
       "pages/*": ["src/pages/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "middlewares/*": ["src/middlewares/*"],
+      "env": ["src/env"]
     },
     "baseUrl": ".",
     "moduleResolution": "node",
