@@ -19,6 +19,6 @@ module.exports = {
   rules: {
     "subject-empty": [0],
     "function-rules/subject-empty": [2, "always", cyrillicRule],
-    "type-enum": [2, "always", ["feat", "fix", "docs", "style", "refactor", "test", "revert", "WIP"]]
+    "type-enum": [2, "always", ["feat", "fix", "docs", "style", "refactor", "test", "revert", "chore", "WIP"]]
   }
 }
