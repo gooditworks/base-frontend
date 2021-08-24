@@ -37,6 +37,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
+    "@gooditworks/monitoring": "^1.1.0",
     "dotenv": "^10.0.0"
   }
 }
