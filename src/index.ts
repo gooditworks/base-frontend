@@ -15,21 +15,22 @@ const greet = (name?: string): string => {
   return `Hello, ${name}`
 }
 
-const reader = createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
+if (require.main === module) {
+  const reader = createInterface({
+    input: process.stdin,
+    output: process.stdout
+  })
 
-reader.question("What is your name?: ", answer => {
-  try {
-    const greeting = greet(answer)
+  reader.question("What is your name?: ", answer => {
+    try {
+      const greeting = greet(answer)
+      logger.info(greeting)
+    } catch (error) {
+      logger.captureException(error)
+    }
 
-    logger.info(greeting)
-  } catch (error) {
-    logger.captureException(error)
-  }
-
-  reader.close()
-})
+    reader.close()
+  })
+}
 
 export default greet
