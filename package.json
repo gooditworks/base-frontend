@@ -7,6 +7,8 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "sh ./scripts/add_base_remote.sh",
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
     "lint": "concurrently -c green \"npm:lint:*\"",
     "lint:base": "sh ./scripts/check_base_update.sh",
     "lint:typecheck": "tsc --noEmit --project tsconfig.json",
@@ -34,6 +36,7 @@
     "prettier": "^2.3.1",
     "standard-version": "^9.3.1",
     "ts-jest": "^27.0.3",
+    "ts-node": "^10.2.1",
     "typescript": "^4.3.2"
   },
   "dependencies": {

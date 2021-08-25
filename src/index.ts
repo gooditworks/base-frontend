@@ -1,5 +1,35 @@
+import {logger} from "@gooditworks/monitoring"
+import {createInterface} from "readline"
+
 import "./monitoring"
 
-const sum = (a: number, b: number): number => a + b
+const greet = (name?: string): string => {
+  if (!name) {
+    throw new Error("Name not found")
+  }
 
-export default sum
+  if (name === "cat") {
+    logger.warn("Cats can't use a keyboard")
+  }
+
+  return `Hello, ${name}`
+}
+
+const reader = createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+
+reader.question("What is your name?: ", answer => {
+  try {
+    const greeting = greet(answer)
+
+    logger.info(greeting)
+  } catch (error) {
+    logger.captureException(error)
+  }
+
+  reader.close()
+})
+
+export default greet

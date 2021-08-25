@@ -1,9 +1,9 @@
-import sum from "./index"
+import greet from "./index"
 
-describe("sum function", () => {
+describe("greet function", () => {
   test("works correctly", () => {
-    const result = sum(40, 2)
+    const greeting = greet("max")
 
-    expect(result).toBe(42)
+    expect(greeting).toBe("Hello, max")
   })
 })
