@@ -5,6 +5,8 @@ jobs:
   build-test:
     name: Build & Test
     runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: {{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - run: npm install
