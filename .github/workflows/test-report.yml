@@ -1,0 +1,21 @@
+on:
+  pull_request:
+  push:
+jobs:
+  build-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npx jest --ci --testResultsProcessor=jest-junit
+
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Jest Tests
+          path: junit.xml
+          reporter: jest-junit
