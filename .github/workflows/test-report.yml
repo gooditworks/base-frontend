@@ -9,6 +9,10 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
       - run: npm install
       - run: npx jest --ci --testResultsProcessor=jest-junit
 
