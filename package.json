@@ -32,7 +32,7 @@
     "enhanced-resolve": "^5.8.2",
     "eslint": "^7.28.0",
     "eslint-config-airbnb-base-ts": "^14.1.1",
-    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jest": "^24.4.0",
     "jest": "^27.0.4",
     "jest-junit": "^12.2.0",
     "prettier": "^2.3.1",
