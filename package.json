@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "tsc",
+    "build": "next build",
     "start": "next build && next start",
     "postinstall": "sh ./scripts/add_base_remote.sh",
     "lint": "concurrently -c green \"npm:lint:*\"",
