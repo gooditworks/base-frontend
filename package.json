@@ -5,6 +5,9 @@
   "repository": "https://github.com/gooditworks/base",
   "author": "Max Eliseev <mxseev@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "postinstall": "sh ./scripts/add_base_remote.sh",
     "build": "tsc",
