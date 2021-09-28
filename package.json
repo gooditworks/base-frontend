@@ -28,7 +28,7 @@
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.6",
     "@commitlint/cli": "^13.2.0",
-    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/config-conventional": "^13.2.0",
     "@testing-library/react-hooks": "^7.0.0",
     "@types/classnames": "^2.3.1",
     "@types/jest": "^27.0.2",
