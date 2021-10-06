@@ -9,14 +9,19 @@ import env from "./env"
 
 const loggerTransports = [new ConsoleTransport()]
 if (env.logdnaKey) {
-  const logdnaTransport = new LogdnaNodeTransport(env.logdnaKey, {app: env.logdnaApp})
+  const logdnaTransport = new LogdnaNodeTransport(env.logdnaKey, {
+    app: env.logdnaApp
+  })
 
   loggerTransports.push(logdnaTransport)
 }
 
 const exceptionCapturers = [new ConsoleCapturer()]
 if (env.sentryDsn) {
-  const sentryCapturer = new SentryNodeCapturer({dsn: env.sentryDsn})
+  const sentryCapturer = new SentryNodeCapturer({
+    dsn: env.sentryDsn,
+    environment: env.sentryEnv
+  })
 
   exceptionCapturers.push(sentryCapturer)
 }
