@@ -12,3 +12,9 @@
 2. Проверить код: `npm run lint && npm run test`
 3. Не бампая версию вручную, запустить `standard-version`: `npm run release`
 4. Запушить созданный changelog: `git push`
+
+## Проверка и обновление base
+1. Запустить команду для проверки: `npm run lint:base`
+2. Произвести merge изменений: `git merge base/main`
+
+Если при merge произошли конфликты, исправить их и закомитить. При большом количестве конфликтов в файле `package-lock.json` запустить `npm install --package-lock-only`
