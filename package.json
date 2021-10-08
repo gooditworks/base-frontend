@@ -26,7 +26,7 @@
     "commit": "git add . && cz"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.6",
+    "@arkweid/lefthook": "^0.7.7",
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
     "@testing-library/react-hooks": "^7.0.0",
