@@ -3,6 +3,7 @@
 ## Запуск
 1. Выполнить требования из [@gooditworks/shared](https://github.com/gooditworks/shared#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
 2. Установить зависимости: `npm install`
+3. Установить env переменные согласно [`docs/env.md`](docs/env.md)
 3. Development запуск: `npm start`
 4. Production сборка: `npm run build`
 
@@ -12,16 +13,3 @@
 3. Не бампая версию вручную, запустить `standard-version`: `npm run release`
 4. Запушить созданный changelog: `git push`
 
-## Env переменные
-Для полноценной работы приложения необходимо заполнить следующие env переменные (через командную строку или `.env` файл):
-```
-SENTRY_DSN=<DSN URL от Sentry>
-SENTRY_ENV=<окружение в Sentry (development/production/etc)>
-LOGDNA_KEY=<ключ от logDNA>
-LOGDNA_APP=<название приложение в logDNA, желательно с окончанием текущего окружения (-dev,-prod,-etc)>
-```
-Заготовка уже есть в файле `.env.example`, его можно просто переименовать в `.env` и заполнить.
-
-### Файл `src/env.ts`
-
-В этом файле (и только в нём) производится чтение env перменных всего приложения, а уже из него они пробрасываются дальше. То есть чтение `process.env` вне этого файла запрещено.
