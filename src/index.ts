@@ -26,7 +26,7 @@ if (require.main === module) {
       const greeting = greet(answer)
       logger.info(greeting)
     } catch (error) {
-      logger.captureException(error)
+      logger.captureException(error as Error)
     }
 
     reader.close()
