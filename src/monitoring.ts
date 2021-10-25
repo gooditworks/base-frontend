@@ -10,7 +10,10 @@ const loggerTransports = [new ConsoleTransport()]
 const exceptionCapturers = [new ConsoleCapturer()]
 
 if (env.sentryDsn && typeof window !== "undefined") {
-  const sentryCapturer = new SentryBrowserCapturer({dsn: env.sentryDsn})
+  const sentryCapturer = new SentryBrowserCapturer({
+    dsn: env.sentryDsn,
+    environment: env.sentryEnv
+  })
 
   exceptionCapturers.push(sentryCapturer)
 }
