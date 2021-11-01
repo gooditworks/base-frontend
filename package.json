@@ -32,7 +32,7 @@
     "@testing-library/react-hooks": "^7.0.2",
     "@types/classnames": "^2.3.1",
     "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.4",
+    "@types/node": "^16.11.6",
     "@types/react": "^17.0.32",
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
