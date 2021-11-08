@@ -47,7 +47,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base-ts": "^14.1.1",
     "eslint-config-airbnb-ts": "^14.1.1",
-    "eslint-config-next": "^11.0.0",
+    "eslint-config-next": "^12.0.3",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-jest": "^24.4.0",
     "jest": "^27.3.1",
