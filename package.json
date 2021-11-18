@@ -39,7 +39,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "autoprefixer": "^10.4.0",
     "commitizen": "^4.2.4",
-    "commitlint-plugin-function-rules": "^1.4.0",
+    "commitlint-plugin-function-rules": "^1.5.1",
     "concurrently": "^6.3.0",
     "cypress": "^8.7.0",
     "cz-conventional-changelog": "^3.3.0",
