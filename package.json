@@ -44,7 +44,7 @@
     "cypress": "^8.7.0",
     "cz-conventional-changelog": "^3.3.0",
     "enhanced-resolve": "^5.8.3",
-    "eslint": "^7.32.0",
+    "eslint": "^8.2.0",
     "eslint-config-airbnb-base-ts": "^14.1.1",
     "eslint-config-airbnb-ts": "^14.1.1",
     "eslint-config-next": "^11.0.0",
