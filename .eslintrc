@@ -18,7 +18,9 @@
     "comma-dangle": "off",
     "arrow-parens": ["error", "as-needed"],
     "arrow-body-style": "off",
+    "no-restricted-exports": "off",
     "import/extensions": "off",
+    "import/prefer-default-export": "off",
     "object-curly-spacing": ["error", "never"],
     "object-curly-newline": ["error", {"consistent": true}],
     "@typescript-eslint/quotes": ["error", "double"],
@@ -31,7 +33,14 @@
     "@typescript-eslint/restrict-template-expressions": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ]
   },
   "overrides": [
     {
