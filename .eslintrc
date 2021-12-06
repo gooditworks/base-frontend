@@ -6,7 +6,8 @@
     "project": ["tsconfig.json", "tsconfig.jest.json", "tsconfig.cypress.json"]
   },
   "extends": [
-    "airbnb-ts",
+    "airbnb",
+    "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:@next/next/recommended",
     "next/core-web-vitals"
