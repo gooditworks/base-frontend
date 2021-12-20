@@ -36,7 +36,7 @@
     "@types/react": "^17.0.37",
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
-    "@typescript-eslint/parser": "^5.5.0",
+    "@typescript-eslint/parser": "^5.7.0",
     "autoprefixer": "^10.4.0",
     "commitizen": "^4.2.4",
     "commitlint-plugin-function-rules": "^1.5.1",
