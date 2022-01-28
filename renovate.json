@@ -1,5 +1,5 @@
 {
-  "extends": ["schedule:earlyMondays"],
+  "extends": ["config:base", "schedule:earlyMondays"],
   "labels": ["dependencies"],
   "assigneesFromCodeOwners": true,
   "packageRules": [
