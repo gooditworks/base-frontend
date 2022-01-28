@@ -1,13 +1,13 @@
 {
-  "extends": ["config:base", "schedule:earlyMondays"],
+  "extends": ["schedule:earlyMondays"],
   "labels": ["dependencies"],
   "assigneesFromCodeOwners": true,
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "groupName": "all dependencies",
-      "groupSlug": "all"
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-non-major"
     }
   ]
 }
