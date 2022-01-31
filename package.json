@@ -39,7 +39,7 @@
     "autoprefixer": "10.4.2",
     "commitizen": "4.2.4",
     "commitlint-plugin-function-rules": "1.6.0",
-    "concurrently": "6.5.1",
+    "concurrently": "7.0.0",
     "cypress": "9.3.1",
     "cz-conventional-changelog": "3.3.0",
     "enhanced-resolve": "5.8.3",
