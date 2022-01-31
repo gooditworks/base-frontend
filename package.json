@@ -30,7 +30,7 @@
     "@typescript-eslint/parser": "5.8.0",
     "commitizen": "4.2.4",
     "commitlint-plugin-function-rules": "1.6.0",
-    "concurrently": "6.5.1",
+    "concurrently": "7.0.0",
     "cz-conventional-changelog": "3.3.0",
     "enhanced-resolve": "5.8.3",
     "eslint": "8.5.0",
