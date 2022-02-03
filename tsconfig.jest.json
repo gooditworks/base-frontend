@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "include": ["./**/*.test.*"],
-  "exclude": ["./cypress/**/*"],
   "compilerOptions": {
     "noEmit": true,
     "isolatedModules": false,

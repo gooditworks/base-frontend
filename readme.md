@@ -9,7 +9,6 @@
 - [Tailwind CSS](https://tailwindcss.com)
 - [`react-test-renderer`](https://reactjs.org/docs/test-renderer.html)
 - [`react-hooks-testing-library`](https://github.com/testing-library/react-hooks-testing-library)
-- [Cypress](https://www.cypress.io)
 
 Реализован Counter, где показано как правильно писать UI, логику и тесты.
 
