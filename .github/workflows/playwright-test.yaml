@@ -4,7 +4,7 @@ on: [pull_request]
 jobs:
   run-playwright:
     name: Run Playwright
-    runs-on: ubuntu-latest
+    runs-on: macos-11
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
