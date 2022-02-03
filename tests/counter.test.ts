@@ -3,25 +3,26 @@ import {test, expect} from "@playwright/test"
 import CounterPage from "./poms/counter"
 
 // Checking is counter works correctly
-test("counter works correctly", async ({page}) => {
-  const pom = new CounterPage(page)
-  await pom.goto()
-
-  const assertValue = async (expected: string) => {
+test.describe("counter works correctly", () => {
+  const assertValue = async (pom: CounterPage, expected: string) => {
     expect(await pom.getValue()).toBe(expected)
   }
 
-  await assertValue("0")
+  test("increment works correctly", async ({page}) => {
+    const pom = new CounterPage(page)
+    await pom.goto()
 
-  await pom.increment()
-  await assertValue("1")
+    await assertValue(pom, "0")
+    await pom?.increment()
+    await assertValue(pom, "1")
+  })
 
-  await pom.increment()
-  await assertValue("2")
+  test("decrement works correctly", async ({page}) => {
+    const pom = new CounterPage(page)
+    await pom.goto()
 
-  await pom.decrement()
-  await assertValue("1")
-
-  await pom.decrement()
-  await assertValue("0")
+    await assertValue(pom, "0")
+    await pom?.decrement()
+    await assertValue(pom, "-1")
+  })
 })
