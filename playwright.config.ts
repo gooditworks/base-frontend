@@ -7,6 +7,7 @@ const isCI = !!process.env.CI
 const config: PlaywrightTestConfig = {
   forbidOnly: isCI,
   retries: isCI ? 2 : 0,
+  reporter: isCI ? "github" : "list",
   testDir: "./tests",
   testMatch: /.*\.test\.ts/,
   use: {
