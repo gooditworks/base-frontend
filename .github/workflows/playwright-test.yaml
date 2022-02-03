@@ -1,24 +1,30 @@
 name: Run Playwright E2E tests
 on: [pull_request]
 
-steps:
-  - uses: actions/checkout@v2
-  - uses: actions/setup-node@v2
-    with:
-      node-version: '14'
+jobs:
+  run-playwright:
+    name: Run Playwright
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  - name: Install dependencies
-    run: npm ci
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-  - name: Install Playwright
-    run: npx playwright install --with-deps
+      - name: Install dependencies
+        run: npm ci
 
-  - name: Run your tests
-    run: npm run test:e2e
+      - name: Install Playwright
+        run: npx playwright install --with-deps
 
-  - name: Upload test results
-    if: always()
-    uses: actions/upload-artifact@v2
-    with:
-      name: playwright-results
-      path: test-results
+      - name: Run your tests
+        run: npm run test:e2e
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: playwright-results
+          path: test-results
