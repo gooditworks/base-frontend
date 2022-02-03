@@ -23,6 +23,7 @@
     "playwright:test": "playwright test",
     "playwright:install": "playwright install",
     "playwright:inspect": "PWDEBUG=1 playwright test",
+    "playwright:update-snapshots": "playwright test --update-snapshots",
     "release": "standard-version",
     "commit": "git add . && cz"
   },
