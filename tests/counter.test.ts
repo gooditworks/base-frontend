@@ -1,21 +1,27 @@
 import {test, expect} from "@playwright/test"
 
+import CounterPage from "./poms/counter"
+
 // Checking is counter works correctly
-test("server started correctly", async ({page}) => {
-  await page.goto("/")
+test("counter works correctly", async ({page}) => {
+  const pom = new CounterPage(page)
+  await pom.goto()
 
-  const counterInc = "data-test=counter_inc"
-  const counterDec = "data-test=counter_dec"
-  const counterValue = page.locator("data-test=counter_value")
+  const assertValue = async (expected: string) => {
+    expect(await pom.getValue()).toBe(expected)
+  }
 
-  expect(counterValue).toHaveText("0")
-  await page.click(counterInc)
-  expect(counterValue).toHaveText("1")
-  await page.click(counterInc)
-  expect(counterValue).toHaveText("2")
+  await assertValue("0")
 
-  await page.click(counterDec)
-  expect(counterValue).toHaveText("1")
-  await page.click(counterDec)
-  expect(counterValue).toHaveText("0")
+  await pom.increment()
+  await assertValue("1")
+
+  await pom.increment()
+  await assertValue("2")
+
+  await pom.decrement()
+  await assertValue("1")
+
+  await pom.decrement()
+  await assertValue("0")
 })
