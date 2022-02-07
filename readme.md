@@ -9,6 +9,7 @@
 - [Tailwind CSS](https://tailwindcss.com)
 - [`react-test-renderer`](https://reactjs.org/docs/test-renderer.html)
 - [`react-hooks-testing-library`](https://github.com/testing-library/react-hooks-testing-library)
+- [`Playwright`](https://playwright.dev)
 
 Реализован Counter, где показано как правильно писать UI, логику и тесты.
 
@@ -19,5 +20,6 @@
   - Релиз новой версии
   - Проверка и обновление base
 - [Список env переменных](docs/env.md)
+- [Тестирование](docs/testing.md)
 
 ## Пора бы!
