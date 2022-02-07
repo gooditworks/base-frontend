@@ -24,6 +24,6 @@ Unit тесты пишутся в файлах `*.test.ts` внутри папк
 
 Пример взаимодействия со страницей посредством [POM](https://playwright.dev/docs/test-pom): [counter.test.ts](https://github.com/gooditcollective/base-frontend/blob/main/tests/started.test.ts)
 
-Пример shapshot теста: [snapshots/index.test.ts](https://github.com/gooditcollective/base-frontend/blob/main/tests/snapshots/index.test.ts)
+Файл с shapshot тестами: [snapshots/index.test.ts](https://github.com/gooditcollective/base-frontend/blob/main/tests/snapshots/index.test.ts)
 
 Запуск e2e тестов производится командой `npm run test:e2e`.
