@@ -3,7 +3,6 @@ on: [pull_request]
 
 jobs:
   run-playwright:
-    if: ${{ false }} # disabled for now
     name: Run Playwright
     runs-on: ubuntu-latest
     env:
