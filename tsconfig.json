@@ -1,6 +1,6 @@
 {
-  "include": ["src/**/*", "next-env.d.ts"],
-  "exclude": ["node_modules", "cypress/**/*"],
+  "include": ["src/**/*", "next-env.d.ts", "playwright.config.ts", "./tests/**/*.ts"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "paths": {
       "components/*": ["src/components/*"],

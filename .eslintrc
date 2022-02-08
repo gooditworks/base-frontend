@@ -3,7 +3,7 @@
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
-    "project": ["tsconfig.json", "tsconfig.jest.json", "tsconfig.cypress.json"]
+    "project": ["tsconfig.json", "tsconfig.jest.json"]
   },
   "extends": [
     "airbnb",
@@ -41,12 +41,5 @@
         "unnamedComponents": "arrow-function"
       }
     ]
-  },
-  "overrides": [
-    {
-      "files": ["*.test.ts", "*.test.tsx"],
-      "excludedFiles": "cypress/**",
-      "extends": ["plugin:jest/recommended"]
-    }
-  ]
+  }
 }

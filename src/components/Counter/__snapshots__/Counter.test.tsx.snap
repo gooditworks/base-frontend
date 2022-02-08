@@ -5,19 +5,19 @@ exports[`matches snapshot 1`] = `
   className="flex items-center space-x-8 text-5xl"
 >
   <button
-    data-cy="counter_dec"
+    data-test="counter_dec"
     onClick={[Function]}
     type="button"
   >
     -
   </button>
   <span
-    data-cy="counter_value"
+    data-test="counter_value"
   >
     0
   </span>
   <button
-    data-cy="counter_inc"
+    data-test="counter_inc"
     onClick={[Function]}
     type="button"
   >
