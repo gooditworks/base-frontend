@@ -23,11 +23,11 @@
     "concurrently": "^6.2.0",
     "eslint-config-airbnb-base-ts": "^14.1.1",
     "eslint-plugin-jest": "^24.3.6",
-    "eslint": "^7.28.0",
+    "jest": "^27.0.4",
     "prettier": "^2.3.1",
     "sort-package-json": "^1.54.0",
     "ts-jest": "^27.0.3",
-    "jest": "^27.0.4",
+    "eslint": "^7.28.0",
     "typescript": "^4.3.2"
   }
 }
