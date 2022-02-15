@@ -10,7 +10,7 @@ pre-commit:
 
     packagesort:
       glob: "package.json"
-      run: npm run style:packagesort
+      run: npm run style:packagesort; git add package.json
 
 pre-push:
   parallel: true
