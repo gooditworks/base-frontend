@@ -7,6 +7,10 @@ pre-commit:
     typecheck:
       run: yarn lint:typecheck
 
+    packagesort:
+      glob: "package.json"
+      run: yarn style:packagesort
+
 pre-push:
   parallel: true
   commands:
