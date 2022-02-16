@@ -13,6 +13,10 @@ pre-commit:
     typecheck:
       run: npm run lint:typecheck
 
+    packagesort:
+      glob: "package.json"
+      run: npm run style:packagesort; git add package.json
+
 pre-push:
   parallel: true
   commands:
