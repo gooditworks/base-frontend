@@ -1,7 +1,11 @@
-import {Component, ErrorInfo} from "react"
+import {Component, ErrorInfo, ReactNode} from "react"
 import {logger} from "@gooditworks/monitoring"
 
-class ErrorCapturer extends Component {
+interface Props {
+  children: ReactNode
+}
+
+class ErrorCapturer extends Component<Props> {
   // eslint-disable-next-line class-methods-use-this
   componentDidCatch(error: Error, info: ErrorInfo) {
     logger.captureException(error, {info})
