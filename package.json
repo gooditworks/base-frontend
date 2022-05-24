@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.7",
-    "@commitlint/cli": "16.3.0",
-    "@commitlint/config-conventional": "16.2.4",
+    "@commitlint/cli": "17.0.0",
+    "@commitlint/config-conventional": "17.0.0",
     "@playwright/test": "1.22.0",
     "@testing-library/react-hooks": "7.0.2",
     "@types/jest": "27.5.1",
