@@ -1,6 +1,6 @@
 module.exports = {
   preset: "ts-jest",
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   testMatch: ["**/src/**/*.test.ts?(x)"],
   resolver: "<rootDir>/jest.resolver.cjs",
   globals: {

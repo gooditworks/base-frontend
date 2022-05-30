@@ -1,11 +1,11 @@
 import React from "react"
-import renderer from "react-test-renderer"
+import {render} from "@testing-library/react"
 
 import Counter from "./Counter"
 
 it("matches snapshot", () => {
-  const couter = <Counter value={0} onIncrement={() => {}} onDecrement={() => {}} />
+  const counter = <Counter value={0} onIncrement={() => {}} onDecrement={() => {}} />
+  const {container} = render(counter)
 
-  const tree = renderer.create(couter).toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(container.firstChild).toMatchSnapshot()
 })
