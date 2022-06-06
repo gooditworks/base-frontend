@@ -2,11 +2,10 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="flex items-center space-x-8 text-5xl"
+  class="flex items-center space-x-8 text-5xl"
 >
   <button
     data-test="counter_dec"
-    onClick={[Function]}
     type="button"
   >
     -
@@ -18,7 +17,6 @@ exports[`matches snapshot 1`] = `
   </span>
   <button
     data-test="counter_inc"
-    onClick={[Function]}
     type="button"
   >
     +

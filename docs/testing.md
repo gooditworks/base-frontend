@@ -1,12 +1,13 @@
 # Тестирование
 
 В проекте реализовано несколько технологий тестирования:
-- Unit тесты логики (Jest), React хуков (Jest + [`react-hooks-testing-library`](https://github.com/testing-library/react-hooks-testing-library)) и snapshot тестирование React компонентов (Jest + [`react-test-renderer`](https://reactjs.org/docs/test-renderer.html))
-- End-to-end тестирование всего проекта ([`Playwright`](https://playwright.dev))
+- Unit тесты логики (Jest)
+- Тесты React компонентов и хуков (Jest + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro))
+- End-to-end тестирование всего проекта ([Playwright](https://playwright.dev))
 
 ### Unit тесты
 
-Unit тесты пишутся в файлах `*.test.ts` внутри папки `/src`. Это обычные Jest тесты ([документация](https://jestjs.io/ru/docs/getting-started)). Также интегрированы `react-hooks-testing-library` для тестирования React хуков и `react-test-renderer` для snapshot тестирования React компонентов.
+Unit тесты пишутся в файлах `*.test.ts` внутри папки `/src`. Это обычные Jest тесты ([документация](https://jestjs.io/ru/docs/getting-started)). Также интегрирован [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) для тестирования React компонентов и хуков.
 
 Пример обычного теста: [index.test.ts](https://github.com/gooditcollective/base/blob/main/src/index.test.ts)
 
