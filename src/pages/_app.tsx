@@ -1,4 +1,3 @@
-import React from "react"
 import {AppProps} from "next/app"
 
 import "../monitoring"
@@ -14,4 +13,5 @@ const App = ({Component, pageProps}: AppProps) => {
   )
 }
 
+export {reportWebVitals} from "next-axiom"
 export default App
