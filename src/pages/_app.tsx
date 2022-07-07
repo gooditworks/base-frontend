@@ -1,6 +1,5 @@
 import {AppProps} from "next/app"
 
-import "../monitoring"
 import ErrorCapturer from "components/ErrorCapturer"
 
 import "styles/globals.css"
