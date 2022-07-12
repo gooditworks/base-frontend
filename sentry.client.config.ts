@@ -12,7 +12,8 @@ const exceptionCapturers = [new ConsoleCapturer()]
 if (env.sentryDsn && typeof window !== "undefined") {
   const sentryCapturer = new SentryNextCapturer({
     dsn: env.sentryDsn,
-    environment: env.sentryEnv
+    environment: env.sentryEnv,
+    tracesSampleRate: 0.2
   })
 
   exceptionCapturers.push(sentryCapturer)
