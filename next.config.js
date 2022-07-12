@@ -3,6 +3,10 @@ const {withSentryConfig} = require("@gooditworks/monitoring/next")
 
 const isDeploy = ["production", "preview"].includes(process.env.VERCEL_ENV)
 
+const sentryConfig = {
+  silent: true
+}
+
 const config = {
   sentry: {
     disableServerWebpackPlugin: !isDeploy,
@@ -10,4 +14,4 @@ const config = {
   }
 }
 
-module.exports = withSentryConfig(withAxiom(config))
+module.exports = withSentryConfig(withAxiom(config), sentryConfig)
