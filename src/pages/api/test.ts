@@ -1,9 +1,9 @@
 import {NextApiHandler} from "next"
-import {Sentry, withSentry} from "@gooditworks/monitoring/next"
+import {withSentry} from "@gooditworks/monitoring/next"
 
 const testHandler: NextApiHandler = (request, response) => {
   if (request.query.throw) {
-    Sentry.captureException(new Error(`triggered test exception: ${request.query.throw}`))
+    throw new Error("test error happen")
   }
 
   return response.status(200).json({success: true})
