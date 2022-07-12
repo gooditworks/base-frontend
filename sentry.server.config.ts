@@ -10,7 +10,7 @@ import env from "./src/env"
 const loggerTransports = [new ConsoleTransport()]
 const exceptionCapturers = [new ConsoleCapturer()]
 
-if (env.sentryDsn && typeof window !== "undefined") {
+if (env.sentryDsn) {
   const sentryCapturer = new SentryNextCapturer({
     dsn: env.sentryDsn,
     environment: env.sentryEnv
