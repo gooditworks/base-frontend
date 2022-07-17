@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "5.30.5",
     "@typescript-eslint/parser": "5.30.5",
     "autoprefixer": "10.4.7",
-    "commitizen": "4.2.4",
+    "commitizen": "4.2.5",
     "commitlint-plugin-function-rules": "1.7.1",
     "concurrently": "7.2.2",
     "cssnano": "5.1.12",
