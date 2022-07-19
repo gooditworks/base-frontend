@@ -1,0 +1,47 @@
+name: Update base repository
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Checkout new commits in base repository
+        id: checkout_base
+        run: |
+          unset CI
+          sh scripts/add_base_remote.sh
+
+          git config --global url."https://github.com/".insteadOf git@github.com:
+          git config --global url."https://".insteadOf git://
+          git fetch base
+
+          if ! [ -z "$(git log HEAD..base/main --oneline)" ]; then
+            echo ::set-output name=has_unmerged_commits::true
+
+            export UNMERGED_COMMITS_LIST=$(git --no-pager log HEAD..base/main --pretty=format:"- %h: %s")
+            echo ::set-output name=unmerged_commits_list::$UNMERGED_COMMITS_LIST
+
+            git fetch base main:chore-update
+          fi
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        if: steps.checkout_base.outputs.has_unmerged_commits == 'true'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          title: Update base repository
+          branch: chore-update
+          base: main
+          body: |
+            Base repository updated with commits:
+            ${{ steps.checkout_base.outputs.unmerged_commits_list }}
+
+          draft: false
+          signoff: false
+          delete-branch: true
