@@ -1,0 +1,58 @@
+name: Create PR with updates from base repository
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Checkout new commits in base repository and check updates
+        id: base_check
+        run: |
+          # set base repository remote
+          unset CI
+          sh scripts/add_base_remote.sh
+
+          # tell git to clone via https instead of ssh (to clone without the ssh key)
+          git config --global url."https://github.com/".insteadOf git@github.com:
+          git config --global url."https://".insteadOf git://
+
+          # fetch base repository changes
+          git fetch base main:chore/base-update
+
+          if ! [ -z "$(git log HEAD..chore/base-update --oneline)" ]; then
+            echo ::set-output name=has_unmerged_commits::true
+
+            # Format the list of commits
+            export UNMERGED_COMMITS_LIST=$(git --no-pager log HEAD..chore/base-update --pretty=format:"- %h: %s")
+            echo ::set-output name=unmerged_commits_list::${UNMERGED_COMMITS_LIST//$'\n'/'%0A'}
+
+            # remove the main branch and use the branch from the base repository instead
+            git checkout chore/base-update
+            git branch -D main
+            git branch -m main
+          fi
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        if: steps.base_check.outputs.has_unmerged_commits == 'true'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          title: Update base repository
+          branch: chore/base-update
+          labels: |
+            base-update
+          body: |
+            Base repository updated with commits:
+            ${{ steps.base_check.outputs.unmerged_commits_list }}
+
+          draft: false
+          signoff: false
+          delete-branch: true
