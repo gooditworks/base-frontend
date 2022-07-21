@@ -10,6 +10,9 @@ pre-commit:
 pre-push:
   parallel: true
   commands:
+    test:
+      run: npm run test
+
     eslint:
       glob: "*.{js,ts,tsx}"
       run: npx eslint {staged_files}
@@ -17,5 +20,6 @@ pre-push:
     typecheck:
       run: npm run lint:typecheck
 
-    test:
-      run: npm run test
+    packagesort:
+      glob: "package.json"
+      run: npm run style:packagesort; git add package.json
