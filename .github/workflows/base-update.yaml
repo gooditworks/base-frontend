@@ -16,7 +16,7 @@ jobs:
         id: base_check
         run: |
           # set base repository remote
-          export ALTERNATIVE_BASE_REMOTE=${{ secrets.BASE_REMOTE_URL }}
+          export ALTERNATIVE_BASE_REMOTE=${{ secrets.ALTERNATIVE_BASE_REMOTE }}
 
           if [ -n "$ALTERNATIVE_BASE_REMOTE" ]; then
             git remote add base $ALTERNATIVE_BASE_REMOTE
