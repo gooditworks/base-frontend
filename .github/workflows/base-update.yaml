@@ -16,8 +16,13 @@ jobs:
         id: base_check
         run: |
           # set base repository remote
-          unset CI
-          sh scripts/add_base_remote.sh
+          export ALTERNATIVE_BASE_REMOTE=${{ secrets.ALTERNATIVE_BASE_REMOTE }}
+
+          if [ -n "$ALTERNATIVE_BASE_REMOTE" ]; then
+            git remote add base $ALTERNATIVE_BASE_REMOTE
+          else
+            unset CI && sh scripts/add_base_remote.sh
+          fi
 
           # tell git to clone via https instead of ssh (to clone without the ssh key)
           git config --global url."https://github.com/".insteadOf git@github.com:
