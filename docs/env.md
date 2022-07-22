@@ -2,6 +2,10 @@
 
 Для работы приложения необходимо заполнить следующие env переменные (через командную строку или `.env` файл):
 
+- `SENTRY_URL`: URL до инстанса Sentry (обычно `https://sentry.io`)
+- `SENTRY_ORG`: название организации в Sentry
+- `SENTRY_PROJECT`: название проекта в Sentry
+- `SENTRY_AUTH_TOKEN`: токен от Sentry
 - `NEXT_PUBLIC_SENTRY_ENV`: окружение в Sentry (development/production/etc)
 - `NEXT_PUBLIC_SENTRY_DSN`: DSN URL от Sentry
 - `NEXT_PUBLIC_LOGDNA_APP`: название приложение в logDNA, желательно с окончанием текущего окружения (-dev/-prod/-etc)
