@@ -8,13 +8,7 @@
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "paths": {
-      "components/*": ["src/components/*"],
-      "hooks/*": ["src/hooks/*"],
-      "pages/*": ["src/pages/*"],
-      "styles/*": ["src/styles/*"]
-    },
-    "baseUrl": ".",
+    "baseUrl": "src",
     "moduleResolution": "node",
     "module": "commonjs",
     "jsx": "preserve",
