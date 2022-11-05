@@ -48,7 +48,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         if: steps.base_check.outputs.has_unmerged_commits == 'true'
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           title: Update base repository
           branch: chore/base-update
