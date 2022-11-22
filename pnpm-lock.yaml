@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@arkweid/lefthook': 0.7.7
   '@commitlint/cli': 17.2.0
   '@commitlint/config-conventional': 17.2.0
   '@commitlint/lint': ^17.3.0
+  '@evilmartians/lefthook': ^1.2.1
   '@gooditworks/monitoring': ^1.5.4
   '@types/jest': 29.2.3
   '@types/node': ^18.11.9
@@ -35,10 +35,10 @@ dependencies:
   dotenv: 16.0.3
 
 devDependencies:
-  '@arkweid/lefthook': 0.7.7
   '@commitlint/cli': 17.2.0
   '@commitlint/config-conventional': 17.2.0
   '@commitlint/lint': 17.3.0
+  '@evilmartians/lefthook': 1.2.1
   '@types/jest': 29.2.3
   '@types/node': 18.11.9
   '@typescript-eslint/eslint-plugin': 5.43.0_nqj4bdx4ekws7aecttskpih4py
@@ -69,15 +69,6 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/trace-mapping': 0.3.15
-    dev: true
-
-  /@arkweid/lefthook/0.7.7:
-    resolution: {integrity: sha512-Eq30OXKmjxIAIsTtbX2fcF3SNZIXS8yry1u8yty7PQFYRctx04rVlhOJCEB2UmfTh8T2vrOMC9IHHUvvo5zbaQ==}
-    cpu: [x64, arm64, ia32]
-    os: [darwin, linux, win32]
-    deprecated: '@arkweid/lefthook has been renamed to @evilmartians/lefthook, please upgrade to it. You also can use @evilmartians/lefthook-installer'
-    hasBin: true
-    requiresBuild: true
     dev: true
 
   /@babel/code-frame/7.16.7:
@@ -603,6 +594,14 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@evilmartians/lefthook/1.2.1:
+    resolution: {integrity: sha512-MZT40t0WY1Oz0xYJTBryanmvyXblqmbAI/pHNBI6Q2415NpISqDVHBrffVEXcjAOXBeGl2TPXQr4S/Dh0ckjTg==}
+    cpu: [x64, arm64, ia32]
+    os: [darwin, linux, win32]
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /@gooditworks/monitoring/1.5.4:

@@ -25,10 +25,10 @@
     "dotenv": "16.0.3"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.7.7",
     "@commitlint/cli": "17.2.0",
     "@commitlint/config-conventional": "17.2.0",
     "@commitlint/lint": "^17.3.0",
+    "@evilmartians/lefthook": "^1.2.1",
     "@types/jest": "29.2.3",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "5.43.0",
