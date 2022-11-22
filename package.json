@@ -8,6 +8,7 @@
   "scripts": {
     "build": "tsc",
     "commit": "git add . && cz",
+    "preinstall": "npx only-allow pnpm",
     "postinstall": "sh ./scripts/add_base_remote.sh",
     "lint": "concurrently -c green \"npm:lint:*\"",
     "lint:base": "sh ./scripts/check_base_update.sh",
