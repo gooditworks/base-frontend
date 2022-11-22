@@ -10,8 +10,7 @@
 ## Релиз новой версии
 1. Закоммитить изменения согласно [Conventional commits](https://www.conventionalcommits.org)
 2. Проверить код: `pnpm run lint && pnpm run test`
-3. Не бампая версию вручную, запустить `standard-version`: `pnpm run release`
-4. Запушить созданный changelog: `git push`
+3. Запушить созданный changelog: `git push`
 
 ## Проверка и ручное обновление base
 
