@@ -30,8 +30,8 @@
     "revert": {
       "description": "revert: Откат изменений"
     },
-    "WIP": {
-      "description": "WIP: Незавершенная работа"
+    "wip": {
+      "description": "wip: Незавершенная работа"
     }
   },
   "scopes": [
