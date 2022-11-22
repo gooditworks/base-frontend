@@ -10,14 +10,14 @@
     "commit": "git add . && cz",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "sh ./scripts/add_base_remote.sh",
-    "lint": "concurrently -c green \"npm:lint:*\"",
+    "lint": "concurrently -c green \"pnpm:lint:*\"",
     "lint:base": "sh ./scripts/check_base_update.sh",
     "lint:ts": "eslint --ext .ts,.tsx .",
     "lint:typecheck": "tsc --noEmit --project tsconfig.json",
     "release": "standard-version",
     "start": "ts-node src/index.ts",
     "style:packagesort": "sort-package-json",
-    "test": "concurrently -c green \"npm:test:*\"",
+    "test": "concurrently -c green \"pnpm:test:*\"",
     "test:unit": "jest"
   },
   "dependencies": {
