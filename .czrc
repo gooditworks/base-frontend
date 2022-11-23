@@ -2,39 +2,35 @@
   "path": "cz-conventional-changelog",
   "skipQuestions": [
     "footer",
+    "body",
+    "scope",
     "breaking"
   ],
-  "allowCustomScopes": true,
+  "subjectLimit": 72,
+  "allowCustomScopes": false,
+  "defaultType": "feat",
+  "maxHeaderWidth": 100,
   "types": {
     "feat": {
-      "description": "feat: Новая функция"
+      "description": "Новая функция"
     },
     "fix": {
-      "description": "fix: Багфикс"
+      "description": "Исправление ошибки"
     },
     "refactor": {
-      "description": "refactor: Изменение структуры кода, не влияющее на поведение"
-    },
-    "docs": {
-      "description": "docs: Только документация"
-    },
-    "perf": {
-      "description": "perf: Оптимизация производительности"
-    },
-    "test": {
-      "description": "test: Добавление тестов"
+      "description": "Изменение структуры кода, не влияющее на поведение"
     },
     "chore": {
-      "description": "chore: Мелкие правки кода, генерация конфигураций, изменение настроек окружения и т.п."
+      "description": "Мелкие правки кода, генерация конфигураций, изменение настроек окружения и т.п."
+    },
+    "docs": {
+      "description": "Только документация или комментарии"
     },
     "revert": {
-      "description": "revert: Откат изменений"
+      "description": "Откат изменений"
     },
     "wip": {
-      "description": "wip: Незавершенная работа"
+      "description": "Незавершенная работа"
     }
-  },
-  "scopes": [
-    {"name": "git"}
-  ]
+  }
 }
