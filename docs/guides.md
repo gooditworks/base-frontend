@@ -8,10 +8,18 @@
 4. Production сборка: `pnpm run build`
 
 ## Релиз новой версии
+
+Для корректной работы системы релизов необходимо делать все коммиты согласно [Conventional commits](https://www.conventionalcommits.org), для этого в репозитории уже настроены [commitzen](https://github.com/commitizen/cz-cli) (`pnpm run commit`) и [commitlint](https://github.com/conventional-changelog/commitlint) (настроен git хук для автоматического запуска перед коммитом).
+
+В репозитории настроен Github Action [release-please](https://github.com/googleapis/release-please), который автоматически бампает версию пакета, генерирует changelog и создает Github релизы. После каждого пуша в `main` ветку, он автоматически создаст/обновит PR, в котором будет:
+- обновленный changelog
+- бампнутая версия пакета
+
+Как только релиз готов необходимо смержить этот PR, после чего произойдет публикация Github релиза.
+
 1. Закоммитить изменения согласно [Conventional commits](https://www.conventionalcommits.org)
 2. Проверить код: `pnpm run lint && pnpm run test`
-3. Не бампая версию вручную, запустить `standard-version`: `pnpm run release`
-4. Запушить созданный changelog: `git push`
+3. Запушить созданный changelog: `git push`
 
 ## Проверка и ручное обновление base
 
