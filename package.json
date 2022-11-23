@@ -8,15 +8,16 @@
   "scripts": {
     "build": "tsc",
     "commit": "git add . && cz",
+    "preinstall": "npx only-allow pnpm",
     "postinstall": "sh ./scripts/add_base_remote.sh",
-    "lint": "concurrently -c green \"npm:lint:*\"",
+    "lint": "concurrently -c green \"pnpm:lint:*\"",
     "lint:base": "sh ./scripts/check_base_update.sh",
     "lint:ts": "eslint --ext .ts,.tsx .",
     "lint:typecheck": "tsc --noEmit --project tsconfig.json",
     "release": "standard-version",
     "start": "ts-node src/index.ts",
     "style:packagesort": "sort-package-json",
-    "test": "concurrently -c green \"npm:test:*\"",
+    "test": "concurrently -c green \"pnpm:test:*\"",
     "test:unit": "jest"
   },
   "dependencies": {
@@ -24,10 +25,12 @@
     "dotenv": "16.0.3"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.7.7",
     "@commitlint/cli": "17.2.0",
     "@commitlint/config-conventional": "17.2.0",
+    "@commitlint/lint": "^17.3.0",
+    "@evilmartians/lefthook": "^1.2.1",
     "@types/jest": "29.2.3",
+    "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "5.43.0",
     "@typescript-eslint/parser": "5.43.0",
     "commitizen": "4.2.5",
@@ -38,6 +41,7 @@
     "eslint": "8.28.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "27.1.5",
     "jest": "29.3.1",
     "jest-junit": "15.0.0",
