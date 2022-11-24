@@ -2,6 +2,7 @@ import {FC, ReactNode} from "react"
 
 import {TRPCClientProvider} from "datasources/trpc"
 
+import {roboto} from "styles/fonts"
 import "styles/globals.css"
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 }
 
 const RootLayout: FC<Props> = ({children}) => (
-  <html lang="en">
+  <html lang="en" className={roboto.variable}>
     <head />
     <body>
       <TRPCClientProvider>{children}</TRPCClientProvider>
