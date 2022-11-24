@@ -12,6 +12,9 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "baseUrl": "src",
+    "paths": {
+      "public/*": ["../public/*"]
+    },
     "moduleResolution": "node",
     "module": "commonjs",
     "jsx": "preserve",
