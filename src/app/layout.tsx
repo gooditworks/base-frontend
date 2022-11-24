@@ -9,7 +9,12 @@ type Props = {
 }
 
 const RootLayout: FC<Props> = ({children}) => (
-  <TRPCClientProvider>{children}</TRPCClientProvider>
+  <html lang="en">
+    <head />
+    <body>
+      <TRPCClientProvider>{children}</TRPCClientProvider>
+    </body>
+  </html>
 )
 
 export default RootLayout

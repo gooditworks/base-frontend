@@ -1,13 +1,12 @@
 "use client"
 
 // based on https://github.com/trpc/next-13/blob/main/client/trpcClient.tsx
-// TODO wait for complete Next 13 support in tRPC and migrate
+// TODO wait for complete Next 13 support in tRPC and migrate to @trpc/next-layout
 
 import {FC, ReactNode, useState} from "react"
 import {httpBatchLink} from "@trpc/client"
 import {createTRPCReact} from "@trpc/react-query"
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query"
-import superjson from "superjson"
 
 import type {AppRouter} from "server/routers"
 
@@ -50,7 +49,6 @@ const TRPCClientProvider: FC<Props> = ({children}) => {
     const links = [httpBatchLink({url: trpcUrl})]
 
     return trpc.createClient({
-      transformer: superjson,
       links
     })
   })
