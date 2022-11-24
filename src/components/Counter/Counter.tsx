@@ -1,10 +1,12 @@
+import {FC} from "react"
+
 interface Props {
   value: number
   onIncrement: () => void
   onDecrement: () => void
 }
 
-const Counter = ({value, onIncrement, onDecrement}: Props) => (
+const Counter: FC<Props> = ({value, onIncrement, onDecrement}: Props) => (
   <div className="flex items-center space-x-8 text-5xl">
     <button onClick={onDecrement} type="button" data-test="counter_dec">
       -

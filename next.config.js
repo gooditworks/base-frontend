@@ -7,10 +7,14 @@ const sentryConfig = {
   silent: true
 }
 
+/** @type {import('next').NextConfig} */
 const config = {
   sentry: {
     disableServerWebpackPlugin: !isDeploy,
     disableClientWebpackPlugin: !isDeploy,
+  },
+  experimental: {
+    appDir: true
   }
 }
 
