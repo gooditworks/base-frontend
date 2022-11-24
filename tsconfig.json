@@ -5,25 +5,19 @@
     "playwright.config.ts",
     "./tests/**/*.ts",
     "./sentry.*.config.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.config.js",
+    "tailwind.config.js"
   ],
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "baseUrl": "src",
     "moduleResolution": "node",
     "module": "commonjs",
     "jsx": "preserve",
     "target": "es5",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "jest",
-      "node"
-    ],
+    "lib": ["esnext", "dom"],
+    "types": ["jest", "node"],
     "outDir": "build",
     "strict": true,
     "allowJs": false,
