@@ -1,5 +1,3 @@
-import React from "react"
-
 import useCounter from "hooks/useCounter"
 import Counter from "components/Counter"
 
