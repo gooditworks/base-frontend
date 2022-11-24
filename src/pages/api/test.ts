@@ -1,7 +1,11 @@
-import {NextApiHandler} from "next"
-import {withSentry} from "@gooditworks/monitoring/next"
+import {withAxiom} from "next-axiom"
+import {AxiomApiHandler} from "next-axiom/dist/withAxiom"
 
-const testHandler: NextApiHandler = (request, response) => {
+const testHandler: AxiomApiHandler = async (request, response) => {
+  request.log.info("test handler called", {
+    ip: request.socket.remoteAddress
+  })
+
   if (request.query.throw) {
     throw new Error("test error happen")
   }
@@ -9,4 +13,4 @@ const testHandler: NextApiHandler = (request, response) => {
   return response.status(200).json({success: true})
 }
 
-export default withSentry(testHandler)
+export default withAxiom(testHandler)

@@ -9,6 +9,8 @@ const greetNameHandler = procedure
     })
   )
   .query(({ctx, input}) => {
+    ctx.axiomLogger?.info("greeting user", {name: input.name})
+
     const name = input.name || "Anonymous"
     const greeting = `Hello, ${name}!`
 

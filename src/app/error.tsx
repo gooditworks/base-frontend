@@ -9,9 +9,6 @@ type Props = {
 
 const ErrorPage: FC<Props> = ({error}) => {
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.error(error)
-
     logger.captureException(error)
   }, [error])
 
