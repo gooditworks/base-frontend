@@ -2,11 +2,16 @@
 
 const {withAxiom} = require("next-axiom")
 const {withSentryConfig} = require("@gooditworks/monitoring/next")
+const withBundleAnalyzer = require("@next/bundle-analyzer")
 
 const isDeploy = ["production", "preview"].includes(process.env.VERCEL_ENV)
 
 const sentryConfig = {
   silent: true
+}
+
+const bundleAnalyzerConfig = {
+  enabled: process.env.ANALYZE === "true"
 }
 
 /** @type {import('next').NextConfig} */
@@ -22,10 +27,12 @@ const config = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.freecodecamp.org",
+        hostname: "www.freecodecamp.org"
       }
     ]
   }
 }
 
-module.exports = withSentryConfig(withAxiom(config), sentryConfig)
+module.exports = withBundleAnalyzer(bundleAnalyzerConfig)(
+  withSentryConfig(withAxiom(config), sentryConfig)
+)
