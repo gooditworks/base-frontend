@@ -44,7 +44,7 @@ jobs:
         run: ./node_modules/.bin/next build
 
       - name: Analyze bundle
-        run: pnpx -p nextjs-bundle-analysis report
+        run: pnpx nextjs-bundle-analysis report
 
       - name: Upload bundle
         uses: actions/upload-artifact@v3
