@@ -19,12 +19,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'pnpm'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install deps
+        run: pnpm install
 
       - name: Restore next build
         uses: actions/cache@v3
@@ -39,7 +44,7 @@ jobs:
         run: ./node_modules/.bin/next build
 
       - name: Analyze bundle
-        run: npx -p nextjs-bundle-analysis report
+        run: pnpx -p nextjs-bundle-analysis report
 
       - name: Upload bundle
         uses: actions/upload-artifact@v3
