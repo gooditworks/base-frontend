@@ -4,11 +4,17 @@
     "next-env.d.ts",
     "playwright.config.ts",
     "./tests/**/*.ts",
-    "./sentry.*.config.ts"
+    "./sentry.*.config.ts",
+    ".next/types/**/*.ts",
+    "next.config.js",
+    "tailwind.config.js"
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "baseUrl": "src",
+    "paths": {
+      "public/*": ["../public/*"]
+    },
     "moduleResolution": "node",
     "module": "commonjs",
     "jsx": "preserve",
@@ -25,6 +31,11 @@
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }

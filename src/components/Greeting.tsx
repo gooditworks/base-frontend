@@ -1,10 +1,12 @@
+"use client"
+
 import {ChangeEventHandler, FC, FormEventHandler, useState} from "react"
 
 import trpc from "datasources/trpc"
 
 const useGreetingName = trpc.greeting.greetName.useQuery
 
-const GreetingPage: FC = () => {
+const Greeting: FC = () => {
   const [name, setName] = useState("")
   const greeting = useGreetingName({name}, {enabled: false})
 
@@ -14,6 +16,7 @@ const GreetingPage: FC = () => {
 
   const onSubmit: FormEventHandler<HTMLFormElement> = event => {
     event.preventDefault()
+
     greeting.refetch()
   }
 
@@ -45,4 +48,4 @@ const GreetingPage: FC = () => {
   )
 }
 
-export default GreetingPage
+export default Greeting
