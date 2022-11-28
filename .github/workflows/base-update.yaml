@@ -12,6 +12,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
       - name: Checkout new commits in base repository and check updates
         id: base_check
         run: |
@@ -28,6 +32,10 @@ jobs:
           git config --global url."https://github.com/".insteadOf git@github.com:
           git config --global url."https://".insteadOf git://
 
+          # tell git about current user
+          git config --global user.email ${{ github.actor }}@users.noreply.github.com
+          git config --global user.name ${{ github.actor }}
+
           # fetch base repository changes
           git fetch base main:chore/base-update
 
@@ -38,8 +46,13 @@ jobs:
             export UNMERGED_COMMITS_LIST=$(git --no-pager log HEAD..chore/base-update --pretty=format:"- %h: %s")
             echo ::set-output name=unmerged_commits_list::${UNMERGED_COMMITS_LIST//$'\n'/'%0A'}
 
-            # remove the main branch and use the branch from the base repository instead
+            # checkout to base branch and update renovate config
             git checkout chore/base-update
+
+            # update renovate.json file
+            sh ./scripts/update_base.sh update_renovate
+
+            # remove the main branch and use the branch from the base repository instead
             git branch -D main
             git branch -m main
           fi
