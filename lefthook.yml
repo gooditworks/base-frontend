@@ -15,11 +15,17 @@ pre-push:
 
     eslint:
       glob: "*.{js,ts,tsx}"
-      run: npx eslint {staged_files}
+      run: pnpm exec eslint {staged_files}
 
     typecheck:
-      run: npm run lint:typecheck
+      run: pnpm run lint:typecheck
 
     packagesort:
       glob: "package.json"
-      run: npm run style:packagesort; git add package.json
+      run: pnpm run style:packagesort; git add package.json
+
+pre-push:
+  parallel: true
+  commands:
+    test:
+      run: pnpm run test
