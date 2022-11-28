@@ -1,5 +1,6 @@
 import {AppProps} from "next/app"
 
+import trpc from "datasources/trpc"
 import ErrorCapturer from "components/ErrorCapturer"
 
 import "styles/globals.css"
@@ -13,4 +14,4 @@ const App = ({Component, pageProps}: AppProps) => {
 }
 
 export {reportWebVitals} from "next-axiom"
-export default App
+export default trpc.withTRPC(App)

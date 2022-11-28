@@ -1,8 +1,9 @@
 module.exports = {
   testEnvironment: "jsdom",
   testMatch: ["**/src/**/*.test.ts?(x)"],
-  resolver: "<rootDir>/jest.resolver.cjs",
+  moduleDirectories: ["node_modules", "src"],
+  modulePaths: ["<rootDir>/src"],
   transform: {
-    "^.+.tsx?$": ["ts-jest", {tsconfig: "<rootDir>/tsconfig.jest.json"}],
+    "^.+.tsx?$": ["ts-jest", {tsconfig: "<rootDir>/tsconfig.jest.json"}]
   }
 }

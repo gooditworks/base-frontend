@@ -13,7 +13,7 @@ class CounterPage {
   }
 
   async goto() {
-    await this.page.goto("/")
+    await this.page.goto("/example/counter")
   }
 
   getValue(): Promise<string | null> {
