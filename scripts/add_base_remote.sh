@@ -1,6 +1,6 @@
 # Создаёт git remote на базовый репозиторий, если его (remote) ещё нет
 
-BASE_REMOTE_URL=git@github.com:gooditcollective/base-frontend.git
+BASE_REMOTE_URL=git@github.com:gooditworks/base-frontend.git
 
 if [ -n "$CI" ]; then
   echo "We in CI/CD, skipping"

@@ -1,6 +1,6 @@
 # Gooditworks Base Frontend
 
-- Базируется на https://github.com/gooditcollective/base
+- Базируется на https://github.com/gooditworks/base
 
 Базовая заготовка для frontend проектов. Включает в себя:
 
