@@ -1,6 +1,6 @@
 # Gooditworks Base
 
-Базовый проект Gooditworks, от которого наследуются другие базовые проекты ([base-api](https://github.com/gooditcollective/base-api), [base-frontend](https://github.com/gooditcollective/base-frontend)).
+Базовый проект Gooditworks, от которого наследуются другие базовые проекты ([base-api](https://github.com/gooditworks/base-api), [base-frontend](https://github.com/gooditworks/base-frontend)).
 
 ## Состав проекта
 
