@@ -50,7 +50,7 @@ jobs:
             git checkout chore/base-update
 
             # update renovate.json file
-            sh ./scripts/update_base.sh update_renovate
+            bash ./scripts/update_base.sh update_renovate
 
             # remove the main branch and use the branch from the base repository instead
             git branch -D main
