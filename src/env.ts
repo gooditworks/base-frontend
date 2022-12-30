@@ -1,12 +1,8 @@
-import dotenv from "dotenv"
-
-dotenv.config()
-
 const env = {
-  sentryDsn: process.env.SENTRY_DSN,
-  sentryEnv: process.env.SENTRY_ENV,
-  logdnaKey: process.env.LOGDNA_KEY,
-  logdnaApp: process.env.LOGDNA_APP
+  sentryEnv: process.env.NEXT_PUBLIC_SENTRY_ENV,
+  sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  logdnaApp: process.env.NEXT_PUBLIC_LOGDNA_APP,
+  logdnaKey: process.env.NEXT_PUBLIC_LOGDNA_KEY
 }
 
 export default env

@@ -6,10 +6,11 @@
     "project": ["tsconfig.json", "tsconfig.jest.json"]
   },
   "extends": [
-    "airbnb-base",
-    "airbnb-typescript/base",
+    "airbnb",
+    "airbnb-typescript",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended"
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals"
   ],
   "rules": {
     "quotes": ["error", "double"],
@@ -17,7 +18,9 @@
     "comma-dangle": "off",
     "arrow-parens": ["error", "as-needed"],
     "arrow-body-style": "off",
+    "no-restricted-exports": "off",
     "import/extensions": "off",
+    "import/prefer-default-export": "off",
     "object-curly-spacing": ["error", "never"],
     "object-curly-newline": ["error", {"consistent": true}],
     "@typescript-eslint/quotes": ["error", "double"],
@@ -27,6 +30,24 @@
     "@typescript-eslint/lines-between-class-members": "off",
     "@typescript-eslint/object-curly-spacing": ["error", "never"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/restrict-template-expressions": "off"
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ]
   }
 }

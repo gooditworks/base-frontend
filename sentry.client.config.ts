@@ -1,26 +1,19 @@
 import initMonitoring from "@gooditworks/monitoring"
 
 import ConsoleTransport from "@gooditworks/monitoring/logger/transport/console"
-import LogdnaNodeTransport from "@gooditworks/monitoring/logger/transport/logdnaNode"
 import ConsoleCapturer from "@gooditworks/monitoring/logger/capturer/console"
-import SentryNodeCapturer from "@gooditworks/monitoring/logger/capturer/sentryNode"
+import SentryNextCapturer from "@gooditworks/monitoring/logger/capturer/sentryNext"
 
-import env from "./env"
+import env from "./src/env"
 
 const loggerTransports = [new ConsoleTransport()]
-if (env.logdnaKey) {
-  const logdnaTransport = new LogdnaNodeTransport(env.logdnaKey, {
-    app: env.logdnaApp
-  })
-
-  loggerTransports.push(logdnaTransport)
-}
-
 const exceptionCapturers = [new ConsoleCapturer()]
-if (env.sentryDsn) {
-  const sentryCapturer = new SentryNodeCapturer({
+
+if (env.sentryDsn && typeof window !== "undefined") {
+  const sentryCapturer = new SentryNextCapturer({
     dsn: env.sentryDsn,
-    environment: env.sentryEnv
+    environment: env.sentryEnv,
+    tracesSampleRate: 0.2
   })
 
   exceptionCapturers.push(sentryCapturer)

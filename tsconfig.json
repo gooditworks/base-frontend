@@ -1,16 +1,26 @@
 {
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.test.ts"],
+  "include": [
+    "src/**/*",
+    "next-env.d.ts",
+    "playwright.config.ts",
+    "./tests/**/*.ts",
+    "./sentry.*.config.ts",
+    ".next/types/**/*.ts",
+    "next.config.js",
+    "tailwind.config.js"
+  ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
+    "baseUrl": "src",
     "paths": {
-      "src/*": ["src/*"]
+      "public/*": ["../public/*"]
     },
-    "baseUrl": ".",
     "moduleResolution": "node",
     "module": "commonjs",
     "jsx": "preserve",
     "target": "es5",
-    "lib": ["esnext"],
+    "lib": ["esnext", "dom"],
+    "types": ["jest", "node"],
     "outDir": "build",
     "strict": true,
     "allowJs": false,
@@ -19,6 +29,13 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }
