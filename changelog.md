@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://github.com/gooditworks/base-frontend/compare/v1.0.0...v1.1.0) (2023-02-25)
+
+
+### Features
+
+* добавлен чистый @sentry/nextjs ([91ddb44](https://github.com/gooditworks/base-frontend/commit/91ddb442422c0206082bb249c6e4b171029c93ea))
+* добавлен чистый Sentry/node ([9c593b5](https://github.com/gooditworks/base-frontend/commit/9c593b53b4465316606baf1640652b3cc09fd6b9))
+* чуть более красивая страница ошибки ([ce8d4cb](https://github.com/gooditworks/base-frontend/commit/ce8d4cb717fdfb1c89091e6847b13561e33ad80c))
+
+
+### Bug Fixes
+
+* update playwright ([605fd7c](https://github.com/gooditworks/base-frontend/commit/605fd7cf4d67723165c4f6a064d6592af69d8586))
+* используем bash в GHA проверки обновлений base ([e635eef](https://github.com/gooditworks/base-frontend/commit/e635eef849eaf3daf9e2251ba33da163ff253cbe))
+* пофикшен GHA Next bundle analyzer ([3d77201](https://github.com/gooditworks/base-frontend/commit/3d772018465d78c312c8e69c4ffef1245e4e3795))
+
 ## 1.0.0 (2022-11-28)
 
 ### Features
