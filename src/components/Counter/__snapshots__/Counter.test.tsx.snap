@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  class="flex items-center space-x-8 text-5xl"
+>
+  <button
+    data-test="counter_dec"
+    type="button"
+  >
+    -
+  </button>
+  <span
+    data-test="counter_value"
+  >
+    0
+  </span>
+  <button
+    data-test="counter_inc"
+    type="button"
+  >
+    +
+  </button>
+</div>
+`;

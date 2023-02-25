@@ -1,18 +1,22 @@
-# Gooditworks Base
+# Gooditworks Base Frontend
 
-Базовый проект Gooditworks, от которого наследуются другие базовые проекты ([base-api](https://github.com/gooditworks/base-api), [base-frontend](https://github.com/gooditworks/base-frontend)).
+- Базируется на https://github.com/gooditworks/base
 
-## Состав проекта
+Базовая заготовка для frontend проектов. Включает в себя:
 
-- TypeScript
-- Unit тесты (jest)
-- Конфигурация Eslint / Prettier
-- Git хуки (lefthook)
-- commitzen / commitlint
+- Все фишки обычного base
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- [Playwright](https://playwright.dev)
+
+Реализован Counter, где показано как правильно писать UI, логику и тесты.
 
 ## Документация
+
 - [Инструкции по разработке](docs/guides.md)
   - Локальный запуск
   - Релиз новой версии
   - Проверка и обновление base
 - [Список env переменных](docs/env.md)
+- [Тестирование](docs/testing.md)

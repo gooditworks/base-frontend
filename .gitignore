@@ -4,3 +4,4 @@
 /.next
 /.env
 /build
+/test-results

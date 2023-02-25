@@ -11,8 +11,6 @@
     }
   ],
   "ignoreDeps": [
-    "@sentry/node",
-    "@sentry/tracing",
     "dotenv",
     "@commitlint/cli",
     "@commitlint/config-conventional",
