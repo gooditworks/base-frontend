@@ -52,7 +52,7 @@
     "@evilmartians/lefthook": "^1.2.1",
     "@types/jest": "29.4.0",
     "commitizen": "4.3.0",
-    "@playwright/test": "1.28.1",
+    "@playwright/test": "1.31.1",
     "@testing-library/react": "13.4.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
