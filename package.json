@@ -21,7 +21,6 @@
     "test:unit": "jest"
   },
   "dependencies": {
-    "@gooditworks/monitoring": "^1.5.4",
     "dotenv": "16.0.3"
   },
   "devDependencies": {
