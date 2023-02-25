@@ -1,7 +1,8 @@
-import {logger} from "@gooditworks/monitoring"
+/* eslint-disable no-console */
+import * as Sentry from "@sentry/node"
 import {createInterface} from "readline"
 
-import "./monitoring"
+import "./sentry"
 
 const greet = (name?: string): string => {
   if (!name) {
@@ -9,13 +10,13 @@ const greet = (name?: string): string => {
   }
 
   if (name === "cat") {
-    logger.warn("Cats can't use a keyboard")
+    Sentry.captureMessage("warn: cats can't use a keyboard")
   }
 
   return `Hello, ${name}`
 }
 
-if (require.main === module) {
+const main = async () => {
   const reader = createInterface({
     input: process.stdin,
     output: process.stdout
@@ -24,13 +25,21 @@ if (require.main === module) {
   reader.question("What is your name?: ", answer => {
     try {
       const greeting = greet(answer)
-      logger.info(greeting)
+
+      console.log(greeting)
     } catch (error) {
-      logger.captureException(error as Error)
+      console.error(error)
+      Sentry.captureException(error)
     }
 
     reader.close()
   })
+
+  await Sentry.flush(2500)
+}
+
+if (require.main === module) {
+  main()
 }
 
 export default greet
