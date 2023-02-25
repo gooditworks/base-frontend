@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/gooditworks/base/compare/v1.0.0...v1.1.0) (2023-02-25)
+
+
+### Features
+
+* добавлен чистый Sentry/node ([9c593b5](https://github.com/gooditworks/base/commit/9c593b53b4465316606baf1640652b3cc09fd6b9))
+* скрипт обновления base, который дополнительно обновляет конфиг renovate ([6f8ea29](https://github.com/gooditworks/base/commit/6f8ea29c714fbcdd76919fd4c6bf44859241b6d5))
+
 ## 1.0.0 (2022-11-23)
 
 
