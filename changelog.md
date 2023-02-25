@@ -2,7 +2,6 @@
 
 ## 1.0.0 (2022-11-28)
 
-
 ### Features
 
 * gha для создания PR для полу-автоматического обновления base ([f865da9](https://github.com/gooditworks/base-frontend/commit/f865da9dd8e1b0c8423c40ca38e60fb582463364))

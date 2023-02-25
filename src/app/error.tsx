@@ -1,7 +1,7 @@
 "use client"
 
 import {FC, useEffect} from "react"
-import {logger} from "@gooditworks/monitoring"
+import * as Sentry from "@sentry/nextjs"
 
 type Props = {
   error: Error
@@ -9,7 +9,7 @@ type Props = {
 
 const ErrorPage: FC<Props> = ({error}) => {
   useEffect(() => {
-    logger.captureException(error)
+    Sentry.captureException(error)
   }, [error])
 
   return (
