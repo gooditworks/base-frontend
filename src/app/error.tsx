@@ -1,13 +1,16 @@
 "use client"
 
 import {FC, useEffect} from "react"
+import * as Sentry from "@sentry/nextjs"
 
 type Props = {
   error: Error
 }
 
 const ErrorPage: FC<Props> = ({error}) => {
-  useEffect(() => {}, [error])
+  useEffect(() => {
+    Sentry.captureException(error)
+  }, [error])
 
   return (
     <div className="p-8 w-screen h-screen flex flex-col items-center justify-center">

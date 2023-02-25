@@ -1,7 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const {withAxiom} = require("next-axiom")
-const withBundleAnalyzer = require("@next/bundle-analyzer")
+const bundleAnalyzer = require("@next/bundle-analyzer")
+const {withSentryConfig} = require("@sentry/nextjs")
+
+const isDeploy = ["production", "preview"].includes(process.env.VERCEL_ENV)
+
+const sentryWebpackPluginConfig = {
+  silent: true
+}
 
 const bundleAnalyzerConfig = {
   enabled: process.env.ANALYZE === "true"
@@ -19,7 +26,14 @@ const config = {
         hostname: "www.freecodecamp.org"
       }
     ]
+  },
+  sentry: {
+    hideSourceMaps: true,
+    disableServerWebpackPlugin: !isDeploy,
+    disableClientWebpackPlugin: !isDeploy,
   }
 }
 
-module.exports = withBundleAnalyzer(bundleAnalyzerConfig)(withAxiom(config))
+const withBundleAnalyzer = bundleAnalyzer(bundleAnalyzerConfig)
+
+module.exports = withSentryConfig(withBundleAnalyzer(withAxiom(config)), sentryWebpackPluginConfig)
