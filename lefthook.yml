@@ -4,8 +4,15 @@ commit-msg:
       run: npx commitlint --edit
 
 pre-commit:
+  lint:
+    run: npm run lint
+
+pre-push:
   parallel: true
   commands:
+    test:
+      run: npm run test
+
     eslint:
       glob: "*.{js,ts,tsx}"
       run: pnpm exec eslint {staged_files}
