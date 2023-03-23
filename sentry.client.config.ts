@@ -1,7 +1,6 @@
-import * as Sentry from "@sentry/node"
-import "@sentry/tracing"
+import * as Sentry from "@sentry/nextjs"
 
-import env from "./env"
+import env from "env"
 
 Sentry.init({
   dsn: env.sentryDsn,

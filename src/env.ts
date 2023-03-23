@@ -1,10 +1,6 @@
-import dotenv from "dotenv"
-
-dotenv.config()
-
 const env = {
-  sentryDsn: process.env.SENTRY_DSN,
-  sentryEnv: process.env.SENTRY_ENV
+  sentryEnv: process.env.NEXT_PUBLIC_SENTRY_ENV,
+  sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN
 }
 
 export default env

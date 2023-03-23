@@ -1,0 +1,36 @@
+name: Run Playwright E2E tests
+on: [pull_request]
+
+jobs:
+  run-playwright:
+    name: Run Playwright
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Install Playwright
+        run: pnpx playwright install --with-deps
+
+      - name: Run your tests
+        run: pnpm run test:e2e
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-results
+          path: test-results
