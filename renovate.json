@@ -9,5 +9,34 @@
       "groupName": "all non-major dependencies",
       "groupSlug": "all-non-major"
     }
+  ],
+  "ignoreDeps": [
+    "@sentry/node",
+    "@sentry/tracing",
+    "dotenv",
+    "@commitlint/cli",
+    "@commitlint/config-conventional",
+    "@commitlint/lint",
+    "@evilmartians/lefthook",
+    "@types/jest",
+    "@types/node",
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser",
+    "commitizen",
+    "commitlint-plugin-function-rules",
+    "concurrently",
+    "cz-conventional-changelog",
+    "eslint",
+    "eslint-config-airbnb-base",
+    "eslint-config-airbnb-typescript",
+    "eslint-plugin-import",
+    "eslint-plugin-jest",
+    "jest",
+    "jest-junit",
+    "prettier",
+    "sort-package-json",
+    "ts-jest",
+    "ts-node",
+    "typescript"
   ]
 }
