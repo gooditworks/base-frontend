@@ -43,7 +43,7 @@ specifiers:
   jest-environment-jsdom: 29.5.0
   jest-junit: 15.0.0
   next: 13.2.4
-  next-axiom: 0.17.0
+  next-axiom: 1.1.1
   postcss: 8.4.21
   postcss-flexbugs-fixes: 5.0.2
   prettier: 2.8.6
@@ -70,7 +70,7 @@ dependencies:
   classnames: 2.3.2
   dotenv: 16.0.3
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
-  next-axiom: 0.17.0_next@13.2.4
+  next-axiom: 1.1.1_next@13.2.4+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   sharp: 0.31.3
@@ -5747,13 +5747,16 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-axiom/0.17.0_next@13.2.4:
-    resolution: {integrity: sha512-qFdnH50SvRjJUAmNjGIYLcRc4tO/U4R1h9WUuniiwaucXAH5KhL06m7TT3WWD2U1HbulwSfC0R+NlPASOx1XlQ==}
-    engines: {node: '>=15'}
+  /next-axiom/1.1.1_next@13.2.4+react@18.2.0:
+    resolution: {integrity: sha512-0r/TJ+/zetD+uDc7B+2E7WpC86hEtQ1U+DuWYrP/JNmUz+ZdPFbrZgzOSqaZ6TwYbXP56VVlPfYwq1YsKHTHYQ==}
+    engines: {node: '>=18'}
     peerDependencies:
-      next: ^12.1.4 || ^13
+      next: '>=13.4'
+      react: '>=18.0.0'
     dependencies:
       next: 13.2.4_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      remeda: 1.29.0
       whatwg-fetch: 3.6.2
     dev: false
 
@@ -6821,6 +6824,10 @@ packages:
       define-properties: 1.2.0
       functions-have-names: 1.2.3
     dev: true
+
+  /remeda/1.29.0:
+    resolution: {integrity: sha512-M3LQ14KtMdQ1879lj/kKji3zBk158s7Rwg963mEkTfQFMxnKrIEAMxJfo/+0sp/+uGgN/KMVU2MBA4LNjqf8YQ==}
+    dev: false
 
   /require-directory/2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
