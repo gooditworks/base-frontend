@@ -63,7 +63,7 @@
     "commitizen": "4.3.0",
     "commitlint-plugin-function-rules": "1.7.1",
     "concurrently": "7.6.0",
-    "cssnano": "5.1.15",
+    "cssnano": "6.1.2",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.36.0",
     "enhanced-resolve": "5.12.0",
