@@ -80,7 +80,7 @@
     "jest-environment-jsdom": "29.5.0",
     "jest-junit": "15.0.0",
     "prettier": "2.8.6",
-    "postcss": "8.4.21",
+    "postcss": "8.4.31",
     "postcss-flexbugs-fixes": "5.0.2",
     "sort-package-json": "2.4.1",
     "standard-version": "9.5.0",
